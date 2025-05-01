@@ -1,0 +1,97 @@
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding H:\proj\hnn_otto_carft_all\build\classes\java\main to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding H:\proj\hnn_otto_carft_all\build\resources\main to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.30\f195ee86e6c896ea47a1d39defbe20eb59cd149d\lombok-1.18.30.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.jetbrains\intellij-fernflower\1.2.1.16\ccedc390562544d83f3d420038be747afb9d73c0\intellij-fernflower-1.2.1.16.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\net.fabricmc\tiny-mappings-parser\0.3.0+build.17\2f10540a290e382a7cd35c16ec3900046a4e252\tiny-mappings-parser-0.3.0+build.17.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\net.fabricmc\tiny-remapper\0.8.2\2cc6565989469ec38893bfb7802b31c0d0d11ea0\tiny-remapper-0.8.2.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\net.fabricmc\access-widener\2.1.0\f62a27adbfd8ab4d4fa5681793039f2c0b177155\access-widener-2.1.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.ow2.sat4j\org.ow2.sat4j.pb\2.3.6\b5c6acac9ad833b30c86697577fe191d50c76caa\org.ow2.sat4j.pb-2.3.6.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.ow2.sat4j\org.ow2.sat4j.core\2.3.6\e29692f97d9d2ce3cddb3fbcc2e9f5d9be6c3c82\org.ow2.sat4j.core-2.3.6.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\33.2.1-jre\818e780da2c66c63bbb6480fef1f3855eeafa3e4\guava-33.2.1-jre.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.14.0\67bf3eaea4f0718cb376a181a629e5f88fa1c9dd\jna-5.14.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.5.0\dc98be5d5390230684a092589d70ea76a147925c\commons-cli-1.5.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.reflections\reflections\0.10.2\b638d7ca0e0fe0146b60a0e7ba232ad852a73b31\reflections-0.10.2.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.burningwave\core\12.64.2\93cceeb5c782560884ad0b4cae459003977667f2\core-12.64.2.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\24.0.0\69b8b443c437fdeefa8d20c18d257b94836a92b9\annotations-24.0.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.1.112.Final\d6b2e543749a86957777a46cf68aaa337cc558cb\netty-all-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.2\c4a06a64e650562f30b7bf9aaec1bfed43aca12b\failureaccess-1.0.2.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.42.0\638ec33f363a94d41a4f03c3e7d3dcfba64e402d\checker-qual-3.42.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.26.1\c1fde57694bdc14e8618899aaa6e857d9465d7de\error_prone_annotations-2.26.1.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.28.0-GA\9a958811a88381bb159cc2f5ed79c34a45c4af7a\javassist-3.28.0-GA.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\org.burningwave\jvm-driver\8.15.0\25726c48ca638be8483ae5152be0ab6fc668760e\jvm-driver-8.15.0.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-epoll\4.1.112.Final\caed6f2ae7aebcef50098a64f55918cb8550d2d0\netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-epoll\4.1.112.Final\a58b80fd8e2d593d37f44faf7dbdcf7bb75fb66d\netty-transport-native-epoll-4.1.112.Final-linux-aarch_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-epoll\4.1.112.Final\2b9e0281fb173da0d7a97797f10775407c33c2e9\netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-kqueue\4.1.112.Final\d1d1fe291c6812a4460a6015669a8a0517476a62\netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-kqueue\4.1.112.Final\6486df8bd85ffb2c4af05ae5ae614644c169a599\netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-epoll\4.1.112.Final\67e590356eb53c20aaabd67f61ae66f628e62e3d\netty-transport-classes-epoll-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-classes-kqueue\4.1.112.Final\c3dffba44e055e3b26df6ab0373a95cc869aa1a5\netty-transport-classes-kqueue-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver-dns-native-macos\4.1.112.Final\5abc86fd98561f7bda897efa29bd96483f86f560\netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver-dns-native-macos\4.1.112.Final\fc3f2e7d05a2b975545896ef0a0a87edfc4a4633\netty-resolver-dns-native-macos-4.1.112.Final-osx-aarch_64.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver-dns-classes-macos\4.1.112.Final\6dc3e7a029636ef56175c407c453d20b64e15fb6\netty-resolver-dns-classes-macos-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver-dns\4.1.112.Final\375872f1c16bb51aac016ff6ee4f5d28b1288d4d\netty-resolver-dns-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler\4.1.112.Final\3d5e2d5bcc6baeeb8c13a230980c6132a778e036\netty-handler-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-native-unix-common\4.1.112.Final\b50ff619cdcdc48e748cba3405c9988529f28f60\netty-transport-native-unix-common-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-dns\4.1.112.Final\6724b184ee870ecc4d8fc36931beeb3c387b0ee\netty-codec-dns-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec\4.1.112.Final\c87f2ec3d9a97bd2b793d16817abb2bab93a7fc3\netty-codec-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport\4.1.112.Final\77cd136dd3843f5e7cbcf68c824975d745c49ddb\netty-transport-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-buffer\4.1.112.Final\bdc12df04bb6858890b8aa108060b5b365a26102\netty-buffer-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-haproxy\4.1.112.Final\71fef69e11023144dd136b1a26a546e8e67e4f31\netty-codec-haproxy-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-http\4.1.112.Final\81af1040bfa977f98dd0e1bd9639513ea862ca04\netty-codec-http-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-http2\4.1.112.Final\7fa28b510f0f16f4d5d7188b86bef59e048f62f9\netty-codec-http2-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-memcache\4.1.112.Final\16ac3a931897c8d685a248fcda4c5190dcc7d480\netty-codec-memcache-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-mqtt\4.1.112.Final\84b4d60de75a06983724d1593633be012feb8b37\netty-codec-mqtt-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-redis\4.1.112.Final\e3467f6bb45d0331cda937c0b46ef79b78e159de\netty-codec-redis-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-smtp\4.1.112.Final\75851dbda637c9499153980f0b7182c260fe8207\netty-codec-smtp-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-socks\4.1.112.Final\9aed7e78c467d06a47a45b5b27466380a6427e2f\netty-codec-socks-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-stomp\4.1.112.Final\fad240a20f9f731ab76d55c8a1800376ab4e6452\netty-codec-stomp-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-codec-xml\4.1.112.Final\a12b05ca7ce58255074bda3d38deeaab0f3ceb8b\netty-codec-xml-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-resolver\4.1.112.Final\58a631d9d44c4ed7cc0dcc9cffa6641da9374d72\netty-resolver-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-common\4.1.112.Final\b2798069092a981a832b7510d0462ee9efb7a80e\netty-common-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler-proxy\4.1.112.Final\b23c87a85451b3b0e7c3e8e89698cea6831a8418\netty-handler-proxy-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-handler-ssl-ocsp\4.1.112.Final\8b6f4656ef8ef113b52f211dbc67daebc20a58f1\netty-handler-ssl-ocsp-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-rxtx\4.1.112.Final\575a881d3c338a92ffb1660d311e236cb0e1c8fb\netty-transport-rxtx-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-sctp\4.1.112.Final\ea1679c9fbe55f9db5120ea658b5d086ed11e8dd\netty-transport-sctp-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.netty\netty-transport-udt\4.1.112.Final\26da072b67983b0841642764c39d677b3b609733\netty-transport-udt-4.1.112.Final.jar to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding C:\Users\a\.gradle\caches\modules-2\files-2.1\io.github.toolfactory\jvm-driver\9.6.0\2b1b7fc19853817e6ff1e266555a4d0267d3300e\jvm-driver-9.6.0.jar to classpath.
+[02:00:24] [INFO] [FabricLoader/GameProvider]: Unlocking app!
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding D:\proj\hanana_app\build\libs\hanana_app-1.0-SNAPSHOT-all.jar to classpath.
+[02:00:24] [INFO] [FabricLoader/GameProvider]: Unlocking legacy mods!
+[02:00:24] [INFO] [FabricLoader/GameProvider]: Unlocking extra mods!
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding ..\build\classes\java\main to classpath.
+[02:00:24] [DEBUG] [FabricLoader/Knot]: Adding D:\proj\thrunner\build\libs\thrunner-1.0-SNAPSHOT-all.jar to classpath.
+[02:00:25] [DEBUG] [FabricLoader/Entrypoint]: No subscribers for entrypoint 'preLaunch'
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Preparing mixins for MixinEnvironment[DEFAULT]
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Selecting config mixinextras.init.mixins.json
+[02:00:25] [DEBUG] [FabricLoader/MixinExtras|Service]: com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1) is taking over from null
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[02:00:25] [DEBUG] [FabricLoader/Mixin]: Preparing mixinextras.init.mixins.json (0)
+[02:00:25] [INFO] [FabricLoader/GameProvider]: Patched!
+[02:00:44] [DEBUG] [FabricLoader/Entrypoint]: No subscribers for entrypoint 'main'
+[02:00:44] [DEBUG] [FabricLoader/Entrypoint]: No subscribers for entrypoint 'client'
+[02:02:28] [ERROR] [FabricLoader/]: The app has crashed!
+net.fabricmc.loader.impl.FormattedException: java.lang.IllegalStateException: !!!ERROR:NO ASSETS PROCESSOR REGISTERED!!!
+	at org.eu.hanana.reimu.hnn.neoloader.core.Provider.launch(Provider.java:213)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at org.eu.hanana.reimu.hnn.neoloader.Main.run(Main.java:43)
+	at org.eu.hanana.reimu.hnn.neoloader.Main.main(Main.java:38)
+Caused by: java.lang.IllegalStateException: !!!ERROR:NO ASSETS PROCESSOR REGISTERED!!!
+	at org.eu.hanana.reimu.thrunner.file.GameAssets.getProcessor(GameAssets.java:61)
+	at org.eu.hanana.reimu.thrunner.GameLoader.<init>(GameLoader.java:44)
+	at org.eu.hanana.reimu.thrunner.ThMain.onlyRunThis(ThMain.java:95)
+	at org.eu.hanana.reimu.hnnapp.Main.run(Main.java:49)
+	at org.eu.hanana.reimu.hnnapp.core.StartUp.enter(StartUp.java:22)
+	at org.eu.hanana.reimu.hnnapp.Main.main(Main.java:38)
+	at org.eu.hanana.reimu.hnnapp.FabricMain.main(FabricMain.java:115)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eu.hanana.reimu.hnn.neoloader.core.Provider.launch(Provider.java:210)
+	... 3 more

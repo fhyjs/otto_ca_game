@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.eu.hanana.reimu.game.ottoca'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    mavenCentral()
+    gradlePluginPortal()
+    maven {
+        url "https://maven.fabricmc.net/"
+    }
+    maven {
+        url 'https://maven.hanana2.link:2053/releases'
+    }
+    maven {
+        url 'https://repo.repsy.io/mvn/fhyjs/jsatori'
+    }
+}
+
+dependencies {
+    implementation(fileTree("D:/proj/thrunner/build/libs/thrunner-1.0-SNAPSHOT-all.jar"))
+    implementation "org.eu.hanana.reimu.hnn.neoloader:neoloader:1.1.2"
+    implementation "org.eu.hanana.reimu.hnnapp:app:1.0.1"
+    implementation 'org.projectlombok:lombok:1.18.30' // 请使用最新版本
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.2' // 用实际的Log4j版本替代 x.x
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
