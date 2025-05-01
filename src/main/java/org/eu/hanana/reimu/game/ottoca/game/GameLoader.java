@@ -15,13 +15,11 @@ import org.eu.hanana.reimu.thrunner.core.groovy.Bridge;
 import org.eu.hanana.reimu.thrunner.core.util.ConsoleCommands;
 import org.eu.hanana.reimu.thrunner.core.util.assets.ResourceLocation;
 import org.eu.hanana.reimu.thrunner.core.util.assets.VirtualFileHandle;
-import org.eu.hanana.reimu.thrunner.jthr.AnimationData;
-import org.eu.hanana.reimu.thrunner.jthr.AnimationManager;
-import org.eu.hanana.reimu.thrunner.jthr.I18nManager;
-import org.eu.hanana.reimu.thrunner.jthr.JthrGame;
+import org.eu.hanana.reimu.thrunner.jthr.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameLoader implements IGameDataProcessor {
@@ -41,9 +39,11 @@ public class GameLoader implements IGameDataProcessor {
         GameData.JthrData.i18nManager=new I18nManager();
         GameData.audioManager=new AudioManager();
         GameData.JthrData.i18nManager=new I18nManager();
+        GameData.JthrData.sounds=new Sounds();
+        GameData.JthrData.sounds.data=new ArrayList<>();
         BRIDGE=new Bridge();
         GameData.audioManager.newAudio("pling", Gdx.files.classpath("assets/system/sound/pling.wav"));
-        GameData.baseGameConfig.global_script="ottoca_assets:scripts/GlobalScript.groovy";
+        GameData.baseGameConfig.global_script="scripts/GlobalScript.groovy";
         var assetsList = GameData.assets.assets.getAllAssetNames();
         GameStorage.allItem.clear();
         for (ResourceLocation resourceLocation : assetsList) {
@@ -52,6 +52,10 @@ public class GameLoader implements IGameDataProcessor {
                 log.info("LoadImage {}",resourceLocation);
             }else if (resourceLocation.getPath().startsWith("sounds")){
                 GameData.audioManager.newAudio(resourceLocation.toString(),new VirtualFileHandle(resourceLocation));
+                var data= new Sounds.Data();
+                data.name=resourceLocation.toString();
+                data.type="music";
+                GameData.JthrData.sounds.data.add(data);
                 log.info("LoadSound {}",resourceLocation);
             } else if (resourceLocation.getPath().startsWith("scripts")) {
                 this.LoadScript(resourceLocation);
@@ -92,7 +96,7 @@ public class GameLoader implements IGameDataProcessor {
     }
     private String LoadScript(ResourceLocation name) throws IOException {
         String s = new String( GameData.assets.assets.readAssetAsBytes(name));
-        name= ResourceLocation.parse(GameData.JthrData.scriptManager.addScript(s,name.toString()));
+        GameData.JthrData.scriptManager.addScript(s, name.getPath());
         return name.toString();
     }
     private String LoadImage(ResourceLocation name) throws IOException {

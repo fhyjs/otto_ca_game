@@ -24,10 +24,7 @@ public class CustomerGunmu extends CustomerBase{
         super.receiveItem(stack);
         setMessage(null);
         newEffect();
-        if (isRequiredItem(stack)){
-            removeRequiredItem(stack);
-        }
-        setMessage("§k?????\n????");
+        setMessage("§4§k????????\n??????????\n??????????\n???????");
         if (wc.requiredItems.isEmpty()){
             wc.currentLeftTime= (int) (0.05*wc.maxWaitingTime);
         }

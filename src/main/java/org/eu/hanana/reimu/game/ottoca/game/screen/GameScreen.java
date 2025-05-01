@@ -17,6 +17,7 @@ import org.eu.hanana.reimu.game.ottoca.util.StackWalkerUtils;
 import org.eu.hanana.reimu.thrunner.GameData;
 import org.eu.hanana.reimu.thrunner.core.IPWidthChooser;
 import org.eu.hanana.reimu.thrunner.core.screen.IHasInputProc;
+import org.eu.hanana.reimu.thrunner.core.screen.IHasName;
 import org.eu.hanana.reimu.thrunner.core.screen.ScreenAdapterBase;
 import org.eu.hanana.reimu.thrunner.core.screen.TitleScreen;
 import org.eu.hanana.reimu.thrunner.gui.WidthBase;
@@ -28,7 +29,7 @@ import org.lwjgl.opengl.GL11;
 
 import java.util.List;
 
-public class GameScreen extends ScreenAdapterBase implements IHasInputProc, IMouseItemHolder, ITickable {
+public class GameScreen extends ScreenAdapterBase implements IHasInputProc, IMouseItemHolder, ITickable, IHasName {
     private final IPWidthChooser inputProcessor=new IPWidthChooser(this){
         @Override
         public boolean keyDown(int keycode) {
@@ -151,5 +152,10 @@ public class GameScreen extends ScreenAdapterBase implements IHasInputProc, IMou
     @Override
     public void tick() {
         customerManager.tick();
+    }
+
+    @Override
+    public String getName() {
+        return "game";
     }
 }

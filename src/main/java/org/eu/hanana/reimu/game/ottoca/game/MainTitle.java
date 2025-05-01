@@ -8,6 +8,7 @@ import org.eu.hanana.reimu.game.ottoca.game.screen.HelpScreen;
 import org.eu.hanana.reimu.thrunner.GameData;
 import org.eu.hanana.reimu.thrunner.core.IPWidthChooser;
 import org.eu.hanana.reimu.thrunner.core.screen.IHasInputProc;
+import org.eu.hanana.reimu.thrunner.core.screen.IHasName;
 import org.eu.hanana.reimu.thrunner.core.screen.ScreenAdapterBase;
 import org.eu.hanana.reimu.thrunner.core.screen.SettingScreen;
 import org.eu.hanana.reimu.thrunner.gui.WidthButton;
@@ -19,7 +20,7 @@ import org.lwjgl.opengl.GL11;
 
 import javax.swing.*;
 
-public class MainTitle extends ScreenAdapterBase implements IHasInputProc {
+public class MainTitle extends ScreenAdapterBase implements IHasInputProc, IHasName {
     private final IPWidthChooser inputProcessor=new IPWidthChooser(this);
     @Override
     public void show() {
@@ -98,5 +99,10 @@ public class MainTitle extends ScreenAdapterBase implements IHasInputProc {
     @Override
     public boolean mouseMoved(int screenX, int screenY) {
         return super.mouseMoved(screenX, screenY);
+    }
+
+    @Override
+    public String getName() {
+        return "title";
     }
 }
