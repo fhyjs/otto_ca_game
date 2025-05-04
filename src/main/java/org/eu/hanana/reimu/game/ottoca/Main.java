@@ -2,13 +2,16 @@ package org.eu.hanana.reimu.game.ottoca;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.eu.hanana.reimu.game.ottoca.core.Config;
 import org.eu.hanana.reimu.game.ottoca.core.OttoGameAssets;
 import org.eu.hanana.reimu.game.ottoca.game.GameLoader;
 import org.eu.hanana.reimu.game.ottoca.util.TickerThread;
 import org.eu.hanana.reimu.hnnapp.ModLoader;
 import org.eu.hanana.reimu.hnnapp.mods.Event;
 import org.eu.hanana.reimu.hnnapp.mods.ModEntry;
+import org.eu.hanana.reimu.hnnapp.mods.events.PostInitModsEvent;
 import org.eu.hanana.reimu.thrunner.core.IGameDataProcessor;
+import org.eu.hanana.reimu.thrunner.core.JThRCfgCore;
 import org.eu.hanana.reimu.thrunner.core.util.assets.IAssets;
 import org.eu.hanana.reimu.thrunner.core.util.assets.JthrAssets;
 import org.eu.hanana.reimu.thrunner.core.util.assets.LayeredAssets;
@@ -32,6 +35,10 @@ public class Main {
     public Main(){
         log.info("init");
         ModLoader.getLoader().regEventBuses(this);
+    }
+    @Event
+    public void onPostInitModsEvent(PostInitModsEvent event) {
+        ModLoader.getLoader().regCfgCore(MOD_ID,new Config());
     }
     @Event
     public void onAssetsInit(AssetsEvent.AssetsInitEvent event){

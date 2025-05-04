@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.eu.hanana.reimu.game.ottoca.Main;
 import org.eu.hanana.reimu.game.ottoca.game.data.Item;
+import org.eu.hanana.reimu.game.ottoca.game.recipe.RecipeManager;
 import org.eu.hanana.reimu.thrunner.GameData;
 import org.eu.hanana.reimu.thrunner.core.AudioManager;
 import org.eu.hanana.reimu.thrunner.core.BaseGameConfig;
@@ -41,6 +42,7 @@ public class GameLoader implements IGameDataProcessor {
         GameData.JthrData.i18nManager=new I18nManager();
         GameData.JthrData.sounds=new Sounds();
         GameData.JthrData.sounds.data=new ArrayList<>();
+        GameInstance.recipeManager=new RecipeManager();
         BRIDGE=new Bridge();
         GameData.audioManager.newAudio("pling", Gdx.files.classpath("assets/system/sound/pling.wav"));
         GameData.baseGameConfig.global_script="scripts/GlobalScript.groovy";
@@ -69,12 +71,22 @@ public class GameLoader implements IGameDataProcessor {
             } else if (resourceLocation.getPath().startsWith("langs")) {
                 this.LoadLang(resourceLocation);
                 log.info("LoadLang {}",resourceLocation);
+            } else if (resourceLocation.getPath().startsWith("recipes")) {
+                this.LoadRecipe(resourceLocation);
+                log.info("LoadRecipe {}",resourceLocation);
             }
 
         }
 
         //after load
         GameStorage.CURRENT = new GameStorage();
+        GameInstance.recipeManager.init();
+        log.info("RecipeManager loaded {} entries.",GameInstance.recipeManager.recipeDataMap.size());
+    }
+
+    private void LoadRecipe(ResourceLocation resourceLocation) throws IOException {
+        String s = new String(GameData.assets.assets.readAssetAsBytes(resourceLocation));
+        GameInstance.recipeManager.loadRecipe(s,resourceLocation.toString());
     }
 
     private void LoadLang(ResourceLocation resourceLocation) throws IOException {

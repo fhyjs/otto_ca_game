@@ -25,4 +25,7 @@ public class ItemStack {
         this.amount-=amount;
         return new ItemStack(item,amount);
     }
+    public boolean isEmpty(){
+        return item==null||this.amount<=0;
+    }
 }

@@ -3,29 +3,39 @@ package org.eu.hanana.reimu.game.ottoca.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.google.gson.internal.JavaVersion;
+import org.eu.hanana.reimu.game.ottoca.core.Config;
 import org.eu.hanana.reimu.game.ottoca.game.screen.GameScreen;
 import org.eu.hanana.reimu.game.ottoca.game.screen.HelpScreen;
+import org.eu.hanana.reimu.hnnapp.ModLoader;
 import org.eu.hanana.reimu.thrunner.GameData;
+import org.eu.hanana.reimu.thrunner.core.BaseGameConfig;
 import org.eu.hanana.reimu.thrunner.core.IPWidthChooser;
 import org.eu.hanana.reimu.thrunner.core.screen.IHasInputProc;
 import org.eu.hanana.reimu.thrunner.core.screen.IHasName;
 import org.eu.hanana.reimu.thrunner.core.screen.ScreenAdapterBase;
 import org.eu.hanana.reimu.thrunner.core.screen.SettingScreen;
-import org.eu.hanana.reimu.thrunner.gui.WidthButton;
-import org.eu.hanana.reimu.thrunner.gui.WidthScreenWindow;
-import org.eu.hanana.reimu.thrunner.gui.WidthScreenWindowV1;
-import org.eu.hanana.reimu.thrunner.gui.WidthTextLabel;
+import org.eu.hanana.reimu.thrunner.gui.*;
 import org.eu.hanana.reimu.thrunner.window.JDialogMoreSettings;
 import org.lwjgl.opengl.GL11;
 
 import javax.swing.*;
 
+import java.io.IOException;
+
+import static org.eu.hanana.reimu.game.ottoca.Main.MOD_ID;
+
 public class MainTitle extends ScreenAdapterBase implements IHasInputProc, IHasName {
     private final IPWidthChooser inputProcessor=new IPWidthChooser(this);
+    private WidthButton difButton;
+    private int currentMode;
+    private int currentMusMode;
+    private WidthButton mutButton;
+
     @Override
     public void show() {
         super.show();
         Gdx.graphics.setTitle("GameRender/LWJGL3/"+Gdx.graphics.getGLVersion().getType()+"/JAVA"+ JavaVersion.getMajorJavaVersion());
+        currentMusMode=Config.ConfigValues.musicType.equals(".mid")?0:1;
     }
 
     @Override
@@ -38,6 +48,16 @@ public class MainTitle extends ScreenAdapterBase implements IHasInputProc, IHasN
         guiComponents.add(new WidthButton().setString("说明").setId(3).setPos(Gdx.graphics.getWidth()*0.06f, Gdx.graphics.getHeight()*0.6f).setSize(Gdx.graphics.getWidth()*0.2f, Gdx.graphics.getHeight()*0.06f));
         guiComponents.add(new WidthButton().setString("选项").setId(1).setPos(Gdx.graphics.getWidth()*0.06f, Gdx.graphics.getHeight()*0.5f).setSize(Gdx.graphics.getWidth()*0.2f, Gdx.graphics.getHeight()*0.06f));
         guiComponents.add(new WidthButton().setString("退出").setId(2).setPos(Gdx.graphics.getWidth()*0.06f, Gdx.graphics.getHeight()*0.4f).setSize(Gdx.graphics.getWidth()*0.2f, Gdx.graphics.getHeight()*0.06f));
+        guiComponents.add((difButton=new WidthButton())
+                .setId(4)
+                .setString(String.format("%s:%s🔃","模式",GameData.JthrData.i18nManager.get(String.format("oca.mode.%d.name",currentMode))))
+                .setPos(Gdx.graphics.getWidth()*0.36f, Gdx.graphics.getHeight()*0.7f)
+                .setSize(Gdx.graphics.getWidth()*0.34f, Gdx.graphics.getHeight()*0.06f));
+        guiComponents.add((mutButton=new WidthButton())
+                .setId(5)
+                .setString(String.format("%s:%s🔃","音频",GameData.JthrData.i18nManager.get(String.format("oca.music.%d.name",currentMusMode))))
+                .setPos(Gdx.graphics.getWidth()*0.36f, Gdx.graphics.getHeight()*0.6f)
+                .setSize(Gdx.graphics.getWidth()*0.34f, Gdx.graphics.getHeight()*0.06f));
         inputProcessor.reLoad();
     }
 
@@ -71,6 +91,19 @@ public class MainTitle extends ScreenAdapterBase implements IHasInputProc, IHasN
         }else if (id==0) {
             GameStorage.CURRENT=new GameStorage();
             gameRender.setScreen(new GameScreen());
+        }else if (id==5) {
+            currentMusMode++;
+            if (currentMusMode>1) currentMusMode=0;
+            mutButton.setString(String.format("%s:%s🔃","音频",GameData.JthrData.i18nManager.get(String.format("oca.music.%d.name",currentMusMode))));
+            Config.ConfigValues.musicType=currentMusMode==0?".mid":".ogg";
+            try {
+                ModLoader.getLoader().getCfgCore(MOD_ID).saveCfg();
+            } catch (IOException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
+            gameRender.runnables.add(()->{
+                gameRender.setScreen(this);
+            });
         }
     }
     @Override
