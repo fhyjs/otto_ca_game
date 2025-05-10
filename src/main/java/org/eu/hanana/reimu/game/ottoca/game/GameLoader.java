@@ -50,6 +50,7 @@ public class GameLoader implements IGameDataProcessor {
         GameData.baseGameConfig.global_script="scripts/GlobalScript.groovy";
         var assetsList = GameData.assets.assets.getAllAssetNames();
         GameStorage.allItem.clear();
+        log.info("CcbEngine-Launching at:"+getClass());
         for (ResourceLocation resourceLocation : assetsList) {
             if (resourceLocation.getPath().startsWith("images")){
                 this.LoadImage(resourceLocation);
