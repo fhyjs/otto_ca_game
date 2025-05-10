@@ -9,4 +9,5 @@ public interface IInventory extends Iterable<ItemStack>{
     boolean add(ItemStack stack);
     void add(ItemStack... stacks);
     int size();
+    default void update(int slotId){}
 }

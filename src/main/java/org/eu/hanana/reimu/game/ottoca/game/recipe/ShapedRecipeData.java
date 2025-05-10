@@ -55,14 +55,20 @@ public class ShapedRecipeData implements IRecipeData{
 
     @Override
     public ItemStack getOutput(List<ItemStack> itemStacks) {
-        return isMatch(itemStacks)?output:null;
+        if(!isMatch(itemStacks)) return null;
+        var cpy = new ArrayList<>(itemStacks);
+        var amount =Integer.MAX_VALUE;
+        for (ItemStack itemStack : cpy) {
+            amount=Math.min(amount,itemStack.amount);
+        }
+        return output.clone().setAmount(amount);
     }
 
     @Override
     public boolean isMatch(List<ItemStack> itemStacks) {
         var input = new ArrayList<Item>();
         for (ItemStack itemStack : itemStacks) {
-            if (itemStack.isEmpty()) {
+            if (itemStack==null||itemStack.isEmpty()) {
                 input.add(null);
                 continue;
             }

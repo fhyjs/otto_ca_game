@@ -3,6 +3,7 @@ package org.eu.hanana.reimu.game.ottoca.game.data;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.SneakyThrows;
+import org.eu.hanana.reimu.game.ottoca.game.customer.CustomerBigEle;
 import org.eu.hanana.reimu.game.ottoca.game.customer.CustomerDaoli;
 import org.eu.hanana.reimu.game.ottoca.game.customer.CustomerGunmu;
 import org.eu.hanana.reimu.game.ottoca.game.customer.CustomerWaao;
@@ -21,7 +22,7 @@ public class CustomerType {
     public static final CustomerType DaoLi = new CustomerType("dao_li","images/customer/daoli.png",CustomerDaoli.class.getName(),0.4);
     public static final CustomerType WaAo = new CustomerType("wa_ao","images/customer/waao.png", CustomerWaao.class.getName(),0.3);
     public static final CustomerType GunMu = new CustomerType("gun_mu","images/customer/gunmu.png", CustomerGunmu.class.getName(),0.1);
-    public static final CustomerType BigBlueEle = new CustomerType("big_blue_ele","animation:ottoca_assets:animations/bigblueele.json", CustomerDaoli.class.getName(),0.2);
+    public static final CustomerType BigBlueEle = new CustomerType("big_blue_ele","animation:ottoca_assets:animations/bigblueele.json", CustomerBigEle.class.getName(),0.2);
     public final String type,texture,customerClass;
     @Getter
     public final double probability;

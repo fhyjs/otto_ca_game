@@ -8,7 +8,9 @@ import org.apache.logging.log4j.Logger;
 import org.eu.hanana.reimu.game.ottoca.Main;
 import org.eu.hanana.reimu.game.ottoca.game.data.Item;
 import org.eu.hanana.reimu.game.ottoca.game.recipe.RecipeManager;
+import org.eu.hanana.reimu.game.ottoca.util.CConsoleCommands;
 import org.eu.hanana.reimu.thrunner.GameData;
+import org.eu.hanana.reimu.thrunner.ThMain;
 import org.eu.hanana.reimu.thrunner.core.AudioManager;
 import org.eu.hanana.reimu.thrunner.core.BaseGameConfig;
 import org.eu.hanana.reimu.thrunner.core.IGameDataProcessor;
@@ -24,14 +26,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameLoader implements IGameDataProcessor {
-    private static final Logger log = LogManager.getLogger(GameLoader.class);
+    private static final Logger log = ThMain.logger;
     public static Bridge BRIDGE;
     @Override
     public void process() throws IOException {
-        if (Main.TICKER_THREAD.getState()== Thread.State.NEW){
-            Main.TICKER_THREAD.start();
+        if (GameInstance.TICKER_THREAD.getState()== Thread.State.NEW){
+            GameInstance.TICKER_THREAD.start();
         }
-        GameData.JthrData.groovyScript.setVariable("c",new ConsoleCommands());
+        GameData.JthrData.groovyScript.setVariable("c",new CConsoleCommands());
         GameStorage.CURRENT=new GameStorage();
         GameData.baseGameConfig=new BaseGameConfig();
         GameData.baseGameConfig.menu=new BaseGameConfig.Menu();

@@ -2,6 +2,7 @@ package org.eu.hanana.reimu.game.ottoca.game.customer;
 
 import com.badlogic.gdx.Gdx;
 import org.eu.hanana.reimu.game.ottoca.game.GameLoader;
+import org.eu.hanana.reimu.game.ottoca.game.GameStorage;
 import org.eu.hanana.reimu.game.ottoca.game.data.ItemStack;
 import org.eu.hanana.reimu.game.ottoca.game.data.WidthCustomer;
 import org.eu.hanana.reimu.game.ottoca.game.width.WidthImage;
@@ -21,13 +22,14 @@ public class CustomerGunmu extends CustomerBase{
 
     @Override
     public void receiveItem(ItemStack stack) {
-        super.receiveItem(stack);
+        //super.receiveItem(stack);
         setMessage(null);
         newEffect();
         setMessage("§4§k????????\n??????????\n??????????\n???????");
         if (wc.requiredItems.isEmpty()){
             wc.currentLeftTime= (int) (0.05*wc.maxWaitingTime);
         }
+        GameStorage.CURRENT.score-=5;
     }
     public void newEffect(){
         if (image!=null&&wc.screen.guiComponentsRenderOnly.contains(image)){
@@ -58,6 +60,7 @@ public class CustomerGunmu extends CustomerBase{
     @Override
     public void remove() {
         super.remove();
+        GameStorage.CURRENT.score+=5;
         if (image!=null){
             GameData.gameRender.runnables.add(()-> {
                 wc.screen.guiComponentsRenderOnly.remove(image);

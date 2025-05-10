@@ -55,7 +55,8 @@ public class WidthCustomer extends WidthBase implements ITickable {
 
     }
     public void randomData(){
-        maxWaitingTime=20* RandomUtils.getRandomInt(random,17,23);
+        GameMode gameMode = GameStorage.CURRENT.gameMode;
+        maxWaitingTime=20* RandomUtils.getRandomInt(random,gameMode.waitSecRange.getV1(),gameMode.waitSecRange.getV2());
         currentLeftTime=maxWaitingTime;
         customerType=CustomerType.getRandom(random);
         texture=customerType.texture;
@@ -71,7 +72,7 @@ public class WidthCustomer extends WidthBase implements ITickable {
             animationObj=GameData.JthrData.animationManager.getAnimation(texture.split("animation:")[1]).getAnimationObj();
             animationObj.getTexture(true);
         }
-        var requiredAmount = RandomUtils.getRandomInt(random,2,8);
+        var requiredAmount = RandomUtils.getRandomInt(random,gameMode.requiredItemAmountRange.getV1(),gameMode.requiredItemAmountRange.getV2());
         for (int i = 0; i < requiredAmount; i++) {
             requiredItems.add(RandomUtils.selectByProbability(GameStorage.getAllItems(), stack -> {
                 if (GameStorage.getFirstInventory().contains(stack.getStack())){

@@ -1,9 +1,7 @@
 package org.eu.hanana.reimu.game.ottoca.game;
 
-import org.eu.hanana.reimu.game.ottoca.game.data.IInventory;
-import org.eu.hanana.reimu.game.ottoca.game.data.Item;
-import org.eu.hanana.reimu.game.ottoca.game.data.ItemStack;
-import org.eu.hanana.reimu.game.ottoca.game.data.ListInventory;
+import org.eu.hanana.reimu.game.ottoca.game.data.*;
+import org.jetbrains.annotations.ApiStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +9,20 @@ import java.util.List;
 public class GameStorage {
     public static GameStorage CURRENT;
     public final IInventory inventory = new ListInventory();
-    public final IInventory craftInventory = new ListInventory();
+    public final IInventory craftInventory = new CraftInventory();
     public  static List<Item> allItem = new ArrayList<>();
+    public int score;
+    public int timeLeft;
+    public int customersSuccess;
+    public int customersFail;
+    @ApiStatus.Internal
+    public int respondFail;
+    @ApiStatus.Internal
+    public int respondSuccess;
+    public GameMode gameMode = GameMode.Challenge;
+    public void init(){
+        timeLeft= gameMode.maxTime;
+    }
     public GameStorage(){
         inventory.getAllStack().addAll(getFirstInventory());
     }

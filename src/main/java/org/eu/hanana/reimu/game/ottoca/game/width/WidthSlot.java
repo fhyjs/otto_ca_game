@@ -102,18 +102,26 @@ public class WidthSlot extends WidthBase {
             return false;
         }
         if (mouseSlot.isEmpty()&&!this.isEmpty()){
-            mouseSlot.setItem(this.getItem().shrink(screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1));
+            mouseSlot.setItem(this.getItem().shrink(screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:(button==0?1:this.getItem().amount/2)));
+            inventory.update(slotId);
             return true;
         }
         if(!mouseSlot.isEmpty()&&mouseSlot.getItem().equals(this.getItem())&& !this.isEmpty()){
             ItemStack mouseItem = mouseSlot.getItem();
-            mouseItem.amount+=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
-            this.getItem().amount-=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
+            if (button==0){
+                mouseItem.amount+=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
+                this.getItem().amount-=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
+            }else {
+                mouseItem.amount-=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
+                this.getItem().amount+=screen.gameRender.inputProcessor.isDown(Input.Keys.SHIFT_LEFT)?this.getItem().amount:1;
+            }
+            inventory.update(slotId);
             return true;
         }
         if (this.isEmpty()&& !mouseSlot.isEmpty()){
-            this.setItem(mouseSlot.getItem());
-            mouseSlot.setItem(null);
+            this.setItem(mouseSlot.getItem().shrink(button==0?mouseSlot.getItem().amount:1));
+            //mouseSlot.setItem(null);
+            inventory.update(slotId);
             return true;
         }
         return super.touchDown(screenX, screenY, pointer, button);

@@ -28,7 +28,6 @@ import static org.eu.hanana.reimu.game.ottoca.Main.MOD_ID;
 
 @ModEntry(id = MOD_ID,name = MOD_ID)
 public class Main {
-    public static final TickerThread TICKER_THREAD = new TickerThread();
     public static final String MOD_ID="ottoca";
     private static final Logger log = LogManager.getLogger(Main.class);
 
